@@ -10,30 +10,173 @@
 		<link rel="stylesheet" href="dist/reveal.css">
 		<link rel="stylesheet" href="dist/theme/black.css">
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<h2>Aggregated Wheather Forecast</h2>
+					<h2>with JAMstack:</h2>
+					<hr> </hr>
+					<h4 class="fragment">JavaScript</h4> 
+					<h4 class="fragment">+ APIs</h4>
+					<h4 class="fragment">+ Markup</h4>
+				</section>
+				<section>
+					<h3>Background on JAMstack</h3>
+					<hr> </hr>
+					<p class="fragment">To understand JAMstack's role today, we need to:</p>
+					<ul>
+						<li class="fragment">Take a look at history of web pages</li>
+						<li class="fragment">How we got here</li>
+					</ul>
+				</section>
+				<section>
+					<h3 style="text-transform: none">The Early 1990s</h3></section>
+					<section>
+						<section> <h3>Users demand was simple </h3>
+							<hr> </hr>
+							<ul>
+								<li style="padding-bottom: 50px"; class="fragment">Web pages initially created as document management system.</li>
+								<li style="padding-bottom: 50px"; class="fragment">Web pages were hand coded in HTML containing links to other pages.</li>
+								<li style="padding-bottom: 50px"; class="fragment">Initially, browsers did not have multimedia support.</li>
+							</ul>	
+					</section>
+						</section>
+				<section>
+					<h3 style="text-transform: none">Mid 1990s - Early 200s</h3></section>
+					<section>
+						<section> <h3>Changing users demand </h3>
+							<hr> </hr>
+							<ul>
+								<li style="padding-bottom: 25px"; class="fragment">Web pages are not hand-coded but are generated dynamically by programming languages.</li>
+								<li style="padding-bottom: 25px"; class="fragment">Web pages require application server/language runtime.</li>
+								<li style="padding-bottom: 25px"; class="fragment">With dynamic sites, server would get content from databases and render web pages in real-time for each user, instead of building html pages ahead of time.</li>
+								<li style="padding-bottom: 25px"; class="fragment">May Require Databases </li>
+							</ul>	
+						</section>
+						<section><h3> Early Examples</h3>
+							<hr> </hr>
+							<ul>
+								<li  class="fragment">Amazon in 1994</li>
+								<li  class="fragment">Yahoo in 1994</li>
+						</section>
+						<section>
+							<h3>Content Management Systems Popularity and Blogging Software Proliferation</h3>
+							<hr class="fragment"> </hr>
+
+							<ul>
+								<li  class="fragment">LiveJournal: 1999</li>
+								<li  class="fragment">Blogger: 1999</li>
+								<li  class="fragment">MoveableType: 2001</li>
+								<li  class="fragment">Drupal: 2001</li>
+								<li  class="fragment">MediaWiki: 2001</li>
+								<li  class="fragment">WordPress: 2003</li>
+								<li  class="fragment">Joomia: 2005</li>
+								<li  class="fragment">Magento: 2009</li>
+						</section>
+
+						<section><h3> Dynamic Web Page - Client Side</h3>
+							<hr class="fragment"> </hr>
+							<ul>
+								<li  style="padding-bottom: 50px"; class="fragment">JavaScript in 1995</li>
+								<li  style="padding-bottom: 50px"; class="fragment">DHTML in 1997: Use of JS to change the look of the page - showing/hiding elements, animations.</li>
+								<li  style="padding-bottom: 50px"; class="fragment">AJAX in 2006: Use of JS to retrieve and send data in the background without reloading the page.</li>
+							</ul>	
+						</section>
+						<section>
+							<h3>In Summary, Dynamic Sites:</h3>
+							<hr class="fragment"> </hr>
+							<table class="fragment">
+								<tr>
+									<th class="fragment">Pros</th>
+									<th class="fragment">Cons</th>
+								</tr>
+								<tr>
+									<td class="fragment">Content is updated in real time.</td>
+									<td class="fragment">More Software, more complexity, more maintenance</td>
+								</tr>
+								<tr>
+									<td class="fragment"> Content can be customized for each user</td>
+								</tr>
+							</table>
+						</section>
+					<section>
+						<h3 style="text-transform: none">Mid 200s to Present</h3></section>
+						<section><h6>Developers Demand Easier Process</h6>
+							<hr class="fragment"> </hr>
+							<p style="text-align:left"; class="fragment">Static Site Generators, SGG</p>
+							<ul>
+								<li class="fragment">A program/script that would take content stored in a format like XML and apply a template to that content to build static html files.</li>
+								<li class="fragment">Has existed since the 1990s: MovableType had an option where you can build a static type.</li>
+								<li  class="fragment">Became more popular in the 2000s due to the invention of lightweight markup languages.</li>
+									<ul>
+										<li class="fragment">reStructuredText in 2002</li>
+										<li class="fragment">Textile in 2002</li>
+										<li class="fragment">markDown in 2002</li>
+									</ul>
+							</ul>
+						</section>
+						<section>
+							<h3 style="text-transform: none">Examples of SSGs</h3>
+							<hr class="fragment"> </hr>
+							<ul>
+								<li class="fragment">Jenkyll in 2008</li>
+								<li class="fragment">Pelican in 2010</li>
+								<li class="fragment">Hugo in 2013</li>
+							</ul>
+						</section>
+						<section>
+							<h3>Static Sites Generators:</h3>
+							<hr class="fragment"> </hr>
+							<table class="fragment">
+								<tr>
+									<th class="fragment">Pros</th>
+									<th class="fragment">Cons</th>
+								</tr>
+								<tr>
+									<td class="fragment">Simple; less software, less complexity</td>
+									<td class="fragment">Limitation on the number of authors</td>
+								</tr>
+								<tr>
+									<td class="fragment"></td>
+									<td class="fragment">Limitation on the number of content</td>
+								</tr>
+							</table>
+						</section>
+
+				</section>
+					
+				
+
+
+				<section><h2>Vertical Slides</h2></section>
+				<section>
+					<section><h2>Slide 1.1</h2></section>
+					<section><h2>Slide 1.2</h2></section>
+					<section><h2>Slide 1.3</h2></section>
+					
+				</section>
+		
+				
+				<section><h2>The End</h2></section>
 			</div>
 		</div>
 
 		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
+		
 		<script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
 			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
+				loop: false,
+				navigationMode: 'grid',
+				transition: 'fade',
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				
 			});
 		</script>
 	</body>
