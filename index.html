@@ -16,25 +16,35 @@
 		<div class="reveal">
 			<div class="slides">
 				<section>
-					<h3>30 Years of Web Development</h3>
-					<hr> </hr>
-					<h3 style="text-transform: none">Weather App with JAMstack</h3>
-					
+					<h1 style="text-transform: none">30 Years of Web Development</h1>
+					<h5 style="text-transform: none">Weather App with JAMstack</h5>
+					<hr class="fragment"> </hr>	
 					<h4 class="fragment">JavaScript</h4> 
 					<h4 class="fragment">+ APIs</h4>
 					<h4 class="fragment">+ Markup</h4>
 				</section>
 				<section>
-					<h4 style="text-transform: none">To understand JAMstack's role today, we need to</h4>
+					<h3 style="text-transform: none">Presentation Outline</h3>
+					<hr class="fragment"> </hr>
+					<ul style="text-align:left">
+						<li class="fragment" style="padding-bottom: 25px"> Changing Web development </li>
+						<li class="fragment" style="padding-bottom: 25px"> Weather App </li>
+						<li class="fragment" style="padding-bottom: 25px"> Deployment</li>
+						<li class="fragment" style="padding-bottom: 25px"> Summary</li>
+					</ul>
+
+				</section>
+				<section>
+					<h4 style="text-transform: none">To understand JAMstack's role in today's web development, we need to</h4>
 					<hr class="fragment"> </hr>
 					<ul>
 						<li class="fragment" style="padding-bottom: 25px">Take a look at history of web development</li>
-						<li class="fragment">How we got here</li>
+						<li class="fragment">Understand how we got here</li>
 					</ul>
 				</section>
 				<section>
 					<section><h3 style="text-transform: none">Web Development in the Early 1990s</h3> </section>
-					<section> <h3 style="text-transform: none">Web Development was Simple </h3>
+					<section> <h3 style="text-transform: none">Web Development Was Simple </h3>
 							<hr class="fragment"> </hr>
 							<ul>
 								<li style="padding-bottom: 50px"; class="fragment">Web pages initially created as document management system.</li>
@@ -49,13 +59,13 @@
 					<section> <h2 style="text-transform: none">Web Development Changing</h2>
 							<hr class="fragment"> </hr>
 							<ul>
-								<li style="padding-bottom: 50px"; class="fragment">Web pages are not hand-coded but are generated dynamically by programming languages.</li>
-								<li style="padding-bottom: 50px"; class="fragment">They require application server/language runtime.</li>
-								<li style="padding-bottom: 50px"; class="fragment">With dynamic sites, servers would get content from databases and render web pages in real-time for each user, instead of building html pages ahead of time.</li>
+								<li style="padding-bottom: 50px"; class="fragment">Web pages were not hand-coded but were generated dynamically by programming languages</li>
+								<li style="padding-bottom: 50px"; class="fragment">They would require application server/language runtime</li>
+								<li style="padding-bottom: 50px"; class="fragment">With dynamic sites, servers would get content from databases and render web pages in real-time for each user, instead of building html pages ahead of time</li>
 								<li style="padding-bottom: 50px"; class="fragment">May Require databases </li>
 							</ul>	
 						</section>
-						<section><h4 style="text-transform: none">Early Examples of Web Development From This Era</h4>
+						<section><h4 style="text-transform: none">Examples of Dynamic Sites From This Era</h4>
 							<hr class="fragment"> </hr>
 							<ul>
 								<li  style="padding-bottom: 20px"; class="fragment">Amazon in 1994</li>
@@ -66,21 +76,21 @@
 							<hr class="fragment"> </hr>
 
 							<ul>
-								<li  style="padding-bottom: 20px"; class="fragment">LiveJournal: 1999</li>
-								<li  style="padding-bottom: 20px"; class="fragment">Blogger: 1999</li>
-								<li  style="padding-bottom: 20px"; class="fragment">MoveableType: 2001</li>
-								<li  style="padding-bottom: 20px"; class="fragment">Drupal: 2001</li>
-								<li  style="padding-bottom: 20px"; class="fragment">MediaWiki: 2001</li>
-								<li  style="padding-bottom: 20px"; class="fragment">WordPress: 2003</li>
-								<li  style="padding-bottom: 20px"; class="fragment">Joomla: 2005</li>
-								<li  style="padding-bottom: 20px"; class="fragment">Magento: 2009</li>
+								<li  style="padding-bottom: 20px"; class="fragment">LiveJournal in 1999</li>
+								<li  style="padding-bottom: 20px"; class="fragment">Blogger in 1999</li>
+								<li  style="padding-bottom: 20px"; class="fragment">MoveableType in 2001</li>
+								<li  style="padding-bottom: 20px"; class="fragment">Drupal in 2001</li>
+								<li  style="padding-bottom: 20px"; class="fragment">MediaWiki in 2001</li>
+								<li  style="padding-bottom: 20px"; class="fragment">WordPress in 2003</li>
+								<li  style="padding-bottom: 20px"; class="fragment">Joomla in 2005</li>
+								<li  style="padding-bottom: 20px"; class="fragment">Magento in 2009</li>
 						</section>
 
-						<section><h6 style="text-transform: none"> Changes Also Impact Client Side and Dynamic Web Page Creation</h6>
+						<section><h6 style="text-transform: none">Dynamic Web Pages Led to New Tools on Client Side</h6>
 							<hr class="fragment"> </hr>
 							<ul>
 								<li  style="padding-bottom: 50px"; class="fragment">JavaScript in 1995</li>
-								<li  style="padding-bottom: 50px"; class="fragment">DHTML in 1997: Use of JS to change the look of the page - showing/hiding elements, animations.</li>
+								<li  style="padding-bottom: 50px"; class="fragment">DHTML in 1997: Use of JS to change the look of the page - showing/hiding elements, animations</li>
 								<li  style="padding-bottom: 50px"; class="fragment">AJAX in 2006: Use of JS to retrieve and send data in the background without reloading the page.</li>
 							</ul>	
 						</section>
@@ -106,7 +116,7 @@
 						<section><h4 style="text-transform: none">Web Development in Mid 2000s to Present</h4></section>
 						<section><h4 style="text-transform: none">Web Development Changing, Again</h4>
 							<hr class="fragment"> </hr>
-							<p style="text-align:left"; class="fragment">Developers Wanted Easier Process</p>
+							<p style="text-align:left"; class="fragment">Developers wanted easier time to develop and deploy</p>
 							<p style="text-align:left"; class="fragment">Static Site Generators, SSG</p>
 							<ul>
 								<li  style="padding-bottom: 0px"; class="fragment">Programs/scripts that would take content stored in format like XML and apply template to that content to build static html files.</li>
@@ -164,7 +174,7 @@
 				</section>
 				<section>
 					<section>
-						<h2 style="text-transform: none"> Finally, We Have JAMstack</h2>
+						<h3 style="text-transform: none"> Finally, in mid 2010s, We Have JAMstack</h3>
 						<hr class="fragment"> </hr>
 						<p class="fragment"> JavaScript + APIs + Markup</p> 
 						<p class="fragment">APIs are used to connect and pull external data, making static sites to become more dynamic</p>
