@@ -17,45 +17,48 @@
 			<div class="slides">
 				<section>
 					<h2 style="text-transform: none">Weather App</h2>
-					<hr> </hr>	
-					<p style="text-transform: none">30 Years of Web Development and <img src="./images/Jamstack_Logo_Original_Solid.png" width="400"></p>
+					<hr color=#f0047f> </hr>	
+					<p style="text-transform: none">30 Years of Web Development and 
+					<img style="padding-top: 25px" src="./images/Jamstack_Logo_Original_Solid.png" width="400"></p>
 					
-					<p class="fragment">JavaScript</p> 
-					<p class="fragment">+ APIs</p>
-					<p class="fragment">+ Markup</p>
+					<span style="color:#f0047f;">JavaScript</span> 
+					<span> + </span> 
+					<span style="color:#f0047f;"> APIs</span>
+					<span> + </span> 
+					<span style="color:#f0047f;">Markup</span>
 				</section>
 				<section>
 					<h3 style="text-transform: none">Presentation Outline</h3>
-					<hr class="fragment"> </hr>
+					<hr color=#f0047f class="fragment" data-fragment-index="1"> </hr>
 					<ul style="text-align:left">
-						<li class="fragment" style="padding-bottom: 25px"> 3 major inflection points on changing web dev</li>
-						<li class="fragment" style="padding-bottom: 25px"> Weather app show and tell</li>
-						<li class="fragment" style="padding-bottom: 25px"> Deployment with Netlify and Github Pages</li>
-						<li class="fragment" style="padding-bottom: 25px"> Summary</li>
+						<li class="fragment" data-fragment-index="1" style="padding-bottom: 25px"> 3 major inflection points on changing web dev</li>
+						<li class="fragment" data-fragment-index="2" style="padding-bottom: 25px"> Weather app show and tell</li>
+						<li class="fragment" data-fragment-index="3" style="padding-bottom: 25px"> Deployment with Netlify and Github Pages</li>
+						<li class="fragment" data-fragment-index="4" style="padding-bottom: 25px"> Summary</li>
 					</ul>
 
 				</section>
 				<section>
 					<h3 style="text-transform: none">To Understand JAMstack's Role in Today's Web Dev</h3>
-					<hr class="fragment"> </hr>
+					<hr color=#f0047f class="fragment"  data-fragment-index="1"> </hr>
 					<ul>
-						<li class="fragment" style="padding-bottom: 25px">Take a look at the history of web dev</li>
-						<li class="fragment" style="padding-bottom: 25px">Understand how we got here</li>
-						<li class="fragment" style="padding-bottom: 25px">Recognize forces shaping web dev, which produce JAMstack</li>
+						<li class="fragment" data-fragment-index="1" style="padding-bottom: 25px">Take a look at the history of web dev</li>
+						<li class="fragment"  data-fragment-index="2" style="padding-bottom: 25px">Understand how we got here</li>
+						<li class="fragment"  data-fragment-index="3" style="padding-bottom: 25px">Recognize forces shaping web dev, which produce JAMstack</li>
 					</ul>
 				</section>
 				<section>
 					<section>
 						<h3 style="text-transform: none">First Major Inflection Point</h3>
-						<p style="text-transform: none">Web Development in Early 1990s</p> 
 						<img src="./images/static.png">
+						<p style="text-transform: none">Web Development in Early 1990s</p>
 					</section>
 					<section> <h3 style="text-transform: none">Web Development Was Simpler in 1990s</h3>
-							<hr class="fragment"> </hr>
+							<hr color=#f0047f class="fragment"  data-fragment-index="1"> </hr>
 							<ul>
-								<li style="padding-bottom: 50px"; class="fragment">Web pages initially created as doc mgmt system</li>
-								<li style="padding-bottom: 50px"; class="fragment">Hand coded in HTML containing links to other pages</li>
-								<li style="padding-bottom: 50px"; class="fragment">Did not have multimedia support</li>
+								<li style="padding-bottom: 50px" class="fragment"  data-fragment-index="1">Web pages initially created as doc mgmt system</li>
+								<li style="padding-bottom: 50px" class="fragment"  data-fragment-index="2">Hand coded in HTML containing links to other pages</li>
+								<li style="padding-bottom: 50px" class="fragment"  data-fragment-index="3">Did not have multimedia support</li>
 							</ul>	
 					</section>
 				</section>
@@ -63,64 +66,65 @@
 				<section> 
 					<section> 
 						<h3 style="text-transform: none">Second Major Inflection Point</h3>
+					    <img src="./images/dynamic.png">
 						<p style="text-transform: none">Web Development in Mid 1990s to Early 2000s</p>
-						<img src="./images/dynamic.png">
 					</section>					
 					<section> <h3 style="text-transform: none">Web Development Changing</h3>
-							<hr class="fragment"> </hr>
+						 	<hr color=#f0047f class="fragment" data-fragment-index="1"> </hr>
 							<ul>
-								<li style="padding-bottom: 50px"; class="fragment">Pages were now being generated dynamically by programming languages</li>
-								<li style="padding-bottom: 50px"; class="fragment">Would require app server or language runtime, producing dynamic web pages</li>
-								<li style="padding-bottom: 50px"; class="fragment">With dynamic sites, servers would get content from databases and render web pages in real-time for each user, instead of building html pages ahead of time</li>
+									
+								<li style="padding-bottom: 50px" class="fragment" data-fragment-index="1">Pages were now being generated dynamically by programming languages</li>
+								<li style="padding-bottom: 50px" class="fragment" data-fragment-index="2">Would require app server or language runtime, producing dynamic web pages</li>
+								<li style="padding-bottom: 50px" class="fragment" data-fragment-index="3">With dynamic sites, servers would get content from databases and render web pages in real-time for each user, instead of building html pages ahead of time</li>
 							</ul>	
 						</section>
 						<section><h4 style="text-transform: none">Examples of Dynamic Sites</h4>
-							<hr class="fragment" data-fragment-index="1"> </hr>
+							<hr color=#f0047f class="fragment" data-fragment-index="1"> </hr>
 							<div class="image123">
 								<div class="imgContainer" style="float: left";>
-									<img class="fragment" data-fragment-index="2"  src="./images/amazon.webp" width="500">
-									<p class="fragment" data-fragment-index="2" >Amazon in 1994</p>
+									<img class="fragment" data-fragment-index="1"  src="./images/amazon.webp" width="500">
+									<p class="fragment" data-fragment-index="1" >Amazon in 1994</p>
 								</div>
 								<div class="imgContainer">
-									<img class="fragment" data-fragment-index="3" class="middle-img" src="./images/yahoo-1994.png" height="300">
-									<p class="fragment" data-fragment-index="3">Yahoo in 1994</p>
+									<img class="fragment" data-fragment-index="2" class="middle-img" src="./images/yahoo-1994.png" height="300">
+									<p class="fragment" data-fragment-index="2">Yahoo in 1994</p>
 								</div>	
 							</div>
 								
 							
 						</section>
 						<section><h4 style="text-transform: none">There Were New Tools on Client Side</h4>
-							<hr class="fragment"> </hr>
+							<hr color=#f0047f class="fragment" data-fragment-index="1"> </hr>
 							<ul>
-								<li  style="padding-bottom: 50px"; class="fragment"> JavaScript in 1995</li>
-								<li  style="padding-bottom: 50px"; class="fragment">DHTML in 1997: Use of JS to change the look of the page - showing/hiding elements, animations</li>
-								<li  style="padding-bottom: 50px"; class="fragment">AJAX in 2006: Use of JS to retrieve and send data in the background without reloading the page</li>
+								<li  style="padding-bottom: 50px" class="fragment" data-fragment-index="1"> JavaScript in 1995</li>
+								<li  style="padding-bottom: 50px" class="fragment" data-fragment-index="2">DHTML in 1997: Use of JS to change the look of the page - showing/hiding elements, animations</li>
+								<li  style="padding-bottom: 50px" class="fragment" data-fragment-index="3">AJAX in 2006: Use of JS to retrieve and send data in the background without reloading the page</li>
 							</ul>	
 						</section>
 						<section>
 							<h4 style="text-transform: none">There Were New Backends Tools As Well</h4>
-							<hr class="fragment"> </hr>
+							<hr color=#f0047f class="fragment" data-fragment-index="1"> </hr>
 							<ul style="text-align:left";> 
-								<li style="padding-bottom: 50px"; class="fragment">New Content Management Systems (CMS) and blogging software</li>  	
-								<li style="padding-bottom: 50px"; class="fragment">Examples of CMS: LiveJournal in 1999, Blogger in 1999, MoveableType in 2001, Drupal in 2001, MediaWiki in 2001, WordPress in 2003, Joomla in 2005, Magento in 2009 </li> 
+								<li style="padding-bottom: 50px" class="fragment" data-fragment-index="1">New Content Management Systems (CMS) and blogging software</li>  	
+								<li style="padding-bottom: 50px" class="fragment" data-fragment-index="2">Examples of CMS: LiveJournal in 1999, Blogger in 1999, MoveableType in 2001, Drupal in 2001, MediaWiki in 2001, WordPress in 2003, Joomla in 2005, Magento in 2009 </li> 
 									
 							</ul>
 						</section>
 
 												<section>
 							<h4 style="text-transform: none">Advantages and Disadvantages of Dynamic Sites</h4>
-							<hr class="fragment"> </hr>
-							<table class="fragment">
+							<hr color=#f0047f class="fragment" data-fragment-index="1"> </hr>
+							<table class="fragment" data-fragment-index="1">
 								<tr>
-									<th class="fragment">Pros</th>
-									<th class="fragment">Cons</th>
+									<th class="fragment" data-fragment-index="1">Pros</th>
+									<th class="fragment" data-fragment-index="1">Cons</th>
 								</tr>
 								<tr>
-									<td class="fragment">Content is updated in real time</td>
-									<td class="fragment">More software, more complexity, more maintenance</td>
+									<td class="fragment" data-fragment-index="2">Content is updated in real time</td>
+									<td class="fragment" data-fragment-index="3">More software, more complexity, more maintenance</td>
 								</tr>
 								<tr>
-									<td class="fragment"> Content can be customized for each user</td>
+									<td class="fragment" data-fragment-index="4"> Content can be customized for each user</td>
 								</tr>
 							</table>
 						</section>
@@ -129,7 +133,7 @@
 
 						<section>
 							<h3 style="text-transform: none">Third Major Inflection Point</h3>
-							<p style="text-transform: none";>Web Development in Mid 2000s to Present</p>
+							
 							<div class="image123"; style="padding-top: 25px";>
 								<div class="imgContainer"; style="float: left";>
 									<img style="padding-top: 70px" src="./images/ssg-flow.png" width="450">
@@ -141,61 +145,62 @@
 								</div>
 								
 							</div>
+							<p style="text-transform: none";>Web Development in Mid 2000s to Present</p>
 						</section>
-						<section><h4 style="text-transform: none">Web Development Changing, Again</h4>
-							<hr class="fragment"> </hr>
-							<p style="text-align:left"; class="fragment">Developers demand faster dev and deployment speed </p>
-							<p style="text-align:left"; class="fragment">This leads to rise of Modern Static Site Generators, SSG</p>
+						<section><h4 style="text-transform: none">Web Development Changing Again</h4>
+							<hr color=#f0047f class="fragment" data-fragment-index="1"> </hr>
+							<p style="text-align:left" class="fragment" data-fragment-index="1">Developers demand faster dev and deployment speed </p>
+							<p style="text-align:left"; class="fragment" data-fragment-index="2">This leads to rise of Modern Static Site Generators, SSG</p>
 							<ul>
-								<li  style="padding-bottom: 0px"; class="fragment">Scripts that would take content stored in format like XML and apply template to that content to build static html files</li>
-								<li  style="padding-bottom: 0px"; class="fragment">Has existed since the 1990s (MovableType)</li>
-								<li  style="padding-bottom: 0px"; class="fragment">Popular in 2000s due to lightweight markup languages: reStructuredText in '02, Textile in '02, markDown in '04</li>
-								<li  style="padding-bottom: 0px"; class="fragment">Examples: Jekyll in '08, Pelican in '10, Hugo in '13</li>
+								<li  style="padding-bottom: 0px" class="fragment" data-fragment-index="3">Scripts that would take content stored in format like XML and apply template to that content to build static html files</li>
+								<li  style="padding-bottom: 0px" class="fragment" data-fragment-index="4">Has existed since the 1990s (MovableType)</li>
+								<li  style="padding-bottom: 0px" class="fragment" data-fragment-index="5">Popular in 2000s due to lightweight markup languages: reStructuredText in '02, Textile in '02, markDown in '04</li>
+								<li  style="padding-bottom: 0px" class="fragment" data-fragment-index="6">Examples: Jekyll in '08, Pelican in '10, Hugo in '13</li>
 							</ul>
 						</section>
 						<section>
 							<h3 style="text-transform: none">Advantages and Disadvantages of SSGs</h3>
-							<hr class="fragment"> </hr>
-							<table class="fragment">
+							<hr color=#f0047f class="fragment" data-fragment-index="1"> </hr>
+							<table class="fragment" data-fragment-index="1">
 								<tr>
-									<th class="fragment">Pros</th>
-									<th class="fragment">Cons</th>
+									<th class="fragment" data-fragment-index="1">Pros</th>
+									<th class="fragment" data-fragment-index="1">Cons</th>
 								</tr>
 								<tr>
-									<td class="fragment">Simple; less software, less complexity</td>
-									<td class="fragment">Limitation on number of authors</td>
+									<td class="fragment" data-fragment-index="2">Simple; less software, less complexity</td>
+									<td class="fragment" data-fragment-index="3">Limitation on number of authors</td>
 								</tr>
 								<tr>
-									<td class="fragment"></td>
-									<td class="fragment">Limitation on amount of content</td>
+									<td></td>
+									<td class="fragment" data-fragment-index="4">Limitation on amount of content</td>
 								</tr>
 							</table>
 						</section>
 						<section>
 							<h6 style="text-transform: none">Not Just SSGs, Single Page Apps Become Popular</h3>
-								<hr class="fragment"> </hr>
+								<hr color=#f0047f class="fragment" data-fragment-index="1"> </hr>
 								<ul>
-									<li style="padding-bottom: 50px"; class="fragment">Most of HTML is rendered in browser, not in server</li>
-									<li style="padding-bottom: 50px"; class="fragment">Data can be fetched asynchronously via API calls</li>
-									<li style="padding-bottom: 50px"; class="fragment">Decoupled from back-end</li>
-									<li style="padding-bottom: 50px"; class="fragment">Flat file web sofware</li>
-									<li style="padding-bottom: 50px"; class="fragment">Examples of JS frameworks used for SPAs: Angular, 2010; EmberJS, 2011; React, 2013; VueJS, 2014</li>
+									<li style="padding-bottom: 50px" class="fragment" data-fragment-index="1">Most of HTML is rendered in browser, not in server</li>
+									<li style="padding-bottom: 50px" class="fragment" data-fragment-index="2">Data can be fetched asynchronously via API calls</li>
+									<li style="padding-bottom: 50px" class="fragment" data-fragment-index="3">Decoupled from back-end</li>
+									<li style="padding-bottom: 50px" class="fragment" data-fragment-index="4">Flat file web sofware</li>
+									<li style="padding-bottom: 50px" class="fragment" data-fragment-index="5">Examples of JS frameworks used for SPAs: Angular, 2010; EmberJS, 2011; React, 2013; VueJS, 2014</li>
 								</ul>
 						</section>
 						<section>
 							<h4 style="text-transform: none">Advantages and Disadvantages of Single Page Apps</h4>
-							<hr class="fragment"> </hr>
-							<table class="fragment">
+							<hr color=#f0047f class="fragment" data-fragment-index="1"> </hr>
+							<table class="fragment" data-fragment-index="1">
 								<tr>
-									<th class="fragment">Pros</th>
-									<th class="fragment">Cons</th>
+									<th class="fragment" data-fragment-index="1">Pros</th>
+									<th class="fragment" data-fragment-index="1">Cons</th>
 								</tr>
 								<tr>
-									<td class="fragment">Decoupled; separation of concerns</td>
-									<td class="fragment">Asking for more from the browser; problems for low-end phones, battery-life on mobile</td>
+									<td class="fragment" data-fragment-index="2">Decoupled; separation of concerns</td>
+									<td class="fragment" data-fragment-index="3">Asking for more from the browser; problems for low-end phones, battery-life on mobile</td>
 								</tr>
 								<tr>
-									<td class="fragment"> Easy to host; only need a web server</td>
+									<td class="fragment" data-fragment-index="4"> Easy to host; only need a web server</td>
 								</tr>
 							</table>
 						</section>
@@ -203,13 +208,13 @@
 				<section>
 					<section>
 						<h5 style="text-transform: none"> In Mid 2010s, as Tech Matures, We Have JAMstack</h5>
-						<hr class="fragment"> </hr>
-						<p class="fragment"> <img src="./images/jamstack.jpg" width="700px"> </p> 
-						<p class="fragment">APIs are used to connect and pull external data, making static sites become more dynamic</p>
+						<hr color=#f0047f class="fragment" data-fragment-index="1"> </hr>
+						<p class="fragment" data-fragment-index="1"> <img src="./images/jamstack.jpg" width="700px"> </p> 
+						<p class="fragment" data-fragment-index="2">APIs are used to connect and pull external data, making static sites become more dynamic</p>
 					</section>
 					<section>
 						<h3 style="text-transform: none">Weather App: JAMstack Show and Tell</h3>
-						<hr> </hr>
+						<hr color=#f0047f> </hr>
 						<div> 
 							<p> <img style="vertical-align:middle" src="./images/weather_app.PNG" height="250"><a style="padding-left: 20px" href="https://www.dannysilitonga.com/" target="_blank">Weather App</a> </p>
 							</p>
@@ -224,7 +229,7 @@
 					</section>
 					<section>
 						<h2 style="text-transform: none">JAMstack Deployment</h2>
-						<hr> </hr>
+						<hr color=#f0047f> </hr>
 						<p><a href="https://app.netlify.com/teams/dannysilitonga/overview"  target="_blank">Netlify</a></p>
 						
 						<p> Are there other projects that can benefit from using Netlify?</p>
@@ -232,18 +237,18 @@
 				</section>
 				<section>
 					<h3 style="text-transform: none">Summary</h3>
-					<hr class="fragment"> </hr>
+					<hr color=#f0047f class="fragment" data-fragment-index="1"> </hr>
 					<ul>
-						<li style="padding-bottom: 25px"; class="fragment">Web development is constantly changing</li>
-						<li style="padding-bottom: 25px"; class="fragment">In 1990s, web development was simpler</li>
-						<li style="padding-bottom: 25px"; class="fragment">In mid 2000s, web development turned complex</li>
-						<li style="padding-bottom: 25px"; class="fragment">New tools, JAMstack and Netlify, became popular recently</li> 
-						<li style="padding-bottom: 25px"; class="fragment">Simplified the process for developers to create and deploy apps, while maintaining benefits of having dynamic sites</li>
+						<li style="padding-bottom: 25px" class="fragment" data-fragment-index="1">Web development is constantly changing</li>
+						<li style="padding-bottom: 25px" class="fragment" data-fragment-index="2">In 1990s, web development was simpler</li>
+						<li style="padding-bottom: 25px" class="fragment" data-fragment-index="3">In mid 2000s, web development turned complex</li>
+						<li style="padding-bottom: 25px" class="fragment" data-fragment-index="4">Recently, new tools, e.g. JAMstack, became popular</li> 
+						<li style="padding-bottom: 25px" class="fragment" data-fragment-index="5">Simplified the process for developers to create and deploy apps, while maintaining benefits of having dynamic sites</li>
 					</ul>
 				</section>
 
 				
-				<section><h2>The End</h2></section>
+				<section><h2  style="text-transform: none">The End</h2></section>
 			</div>
 		</div>
 
