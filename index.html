@@ -16,8 +16,109 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				
+				<section>
+					<a href="https://revealjs.com">
+						<img src="https://static.slid.es/reveal/logo-v1/reveal-white-text.svg" alt="reveal.js logo" style="height: 180px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+					</a>
+					<h3>Promises, Async Await</h3>
+					<hr color=#f0047f size="1px"> </hr>	
+					<p>
+						<small>by <a href="https://github.com/dannysilitonga/reveal.js/tree/async_presentation">Danny Silitonga</a> </small>
+					</p>
+				</section>
+
+				<section>
+					<h3 style="text-transform: none">Presentation Outline</h3>
+					<hr color=#f0047f size="1px" class="fragment" data-fragment-index="1"> </hr>
+					<ul style="text-align:left">
+						<li class="fragment" data-fragment-index="1" style="padding-bottom: 25px;text-align:left"> Synchronous Programming </li>
+						<li class="fragment" data-fragment-index="2" style="padding-bottom: 25px;text-align:left"> Callbacks</li>
+						<li class="fragment" data-fragment-index="3" style="padding-bottom: 25px;text-align:left"> Promises</li>
+						<li class="fragment" data-fragment-index="4" style="padding-bottom: 25px;text-align:left"> Async/Await</li>
+						<li class="fragment" data-fragment-index="4" style="padding-bottom: 25px;text-align:left"> Conclusion</li>
+					</ul>
+
+				</section>
+
+				
+				<section data-markdown>
+					<script type="text/template">
+						<h3 style="text-transform: none">Synchronous Programming</h3>
+						
+						<hr color=#f0047f size="1px"></hr>	
+						<p style="padding-bottom: 25px;text-align:left"> Here is an example:</p>
+						 
+						
+						```
+						console.log('About to define x...')
+						 let x = 5;
+
+						console.log('About to define y...')
+						let y = 10;
+
+						console.log('About to add the variable together...')
+
+						let sum = x + y 
+
+						console.log('The sum is ' + sum); 
+						```
+						<br/>
+						
+						<p style="text-align: left;margin-top: -25px;">The output:</p>
+						<img src="asset/sync1.png"
+     					alt="Output"
+     					style="float: left; margin-left: 50px; margin-top: -10px;" />
+					</script>
+				</section>
+			
+				<section>
+					<section> <h3 style="text-transform: none">Asynchronous Programming</h3>
+					<hr color=#f0047f size="1px"></hr>
+					<ul style="text-align:left">
+						<li class="fragment" data-fragment-index="1" style="padding-bottom: 25px;text-align:left"> Get around functions blocking functions that prevent any code from being executed while we wait for our original functions to complete</li>
+						<li class="fragment" data-fragment-index="2" style="padding-bottom: 25px;text-align:left"> Callbacks were designed for such purpose. One could pass callbacks to what would otherwise be blocking code in JS.</li>
+						<li class="fragment" data-fragment-index="3" style="padding-bottom: 25px;text-align:left"> This is especially important when one has a long running operations, such as reading a file.</li>
+						<li class="fragment" data-fragment-index="4" style="padding-bottom: 25px;text-align:left"> Async/Await</li>
+						<li class="fragment" data-fragment-index="4" style="padding-bottom: 25px;text-align:left"> Conclusion</li>
+					</ul>
+					</section>
+					<section>
+						<h3 style="text-transform: none">Blocking Functions</h3>
+						<hr color=#f0047f size="1px"> </hr>
+							Vertical Slide 1
+					</section>
+					<section>
+						<h3 style="text-transform: none">Callbacks</h3>
+						<hr color=#f0047f size="1px"> </hr>
+						<p style="padding-bottom:5px;text-align:left"> Here is an example: </p>
+						<pre><code data-trim data-noescape data-line-numbers="7,11">
+							let fs = require('fs')
+
+							function printFileContents(error, fileContents){
+    							if (error) {
+        							console.log('ERROR!');
+    							} else {
+        							console.log(fileContents);
+    							}
+							}
+
+							fs.readFile('./hello.txt', 'utf-8', printFileContents);
+							console.log('Hello!');
+						</code></pre>
+						<ul style="text-align:left; padding-top:20px; ">
+							<li class="fragment" data-fragment-index="1" style="padding-bottom: 25px;text-align:left"> The above function would read the helo.txt file.</li>
+							<li class="fragment" data-fragment-index="2" style="padding-bottom: 25px;text-align:left"> The code would assign the contents of the file to the variable fileContents.</li>
+							<li class="fragment" data-fragment-index="3" style="padding-bottom: 25px;text-align:left"> The code would then print fileContents.</li>
+						</ul>
+					</section>
+				</section>
+
+				
+
+			
+			
+			
 			</div>
 		</div>
 
