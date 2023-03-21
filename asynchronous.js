@@ -1,15 +1,14 @@
 let fs = require('fs')
 
-function printFileContents(error, fileContents){
+fs.readFile('./hello.txt', 'utf-8', function printFileContents(error, fileContents){
     if (error) {
         console.log('ERROR!');
     } else {
         console.log(fileContents);
+        console.log('Hello!');
     }
-}
+});
 
-fs.readFile('./hello.txt', 'utf-8', printFileContents);
-console.log('Hello!');
 
 // let fileContents =fs.readFileSync('./hello.txt', 'utf-8');
 // console.log('Hello')

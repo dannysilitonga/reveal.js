@@ -15,16 +15,18 @@
 	</head>
 	<body>
 		<div class="reveal">
-			<div class="slides">
-				
-				<section>
-					<a href="https://revealjs.com">
-						<img src="https://static.slid.es/reveal/logo-v1/reveal-white-text.svg" alt="reveal.js logo" style="height: 180px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+			<div class="slides">				
+				<section id="landingSlide">
+					<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
+						<img src="./asset/javascript-39397.png" alt="reveal.js logo" style="height: 180px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
 					</a>
-					<h3>Promises, Async Await</h3>
+					<h2>Promises, Async Await</h2>
 					<hr color=#f0047f size="1px"> </hr>	
 					<p>
-						<small>by <a href="https://github.com/dannysilitonga/reveal.js/tree/async_presentation">Danny Silitonga</a> </small>
+						<small>by <a href="https://github.com/dannysilitonga/reveal.js/tree/async_presentation">Danny Silitonga</a></small>
+						<br>
+						<small>Examples are adapted from <a href="https://www.informit.com/store/learn-to-program-with-javascript-livelessons-video-9780137560424">JavaScript Live Lessons</a> and <br>
+							<a href="https://learning.oreilly.com/library/view/javascript-cookbook-3rd/9781492055747/">JavaScript Cookbook</a></small>
 					</p>
 				</section>
 
@@ -32,69 +34,68 @@
 					<h3 style="text-transform: none">Presentation Outline</h3>
 					<hr color=#f0047f size="1px" class="fragment" data-fragment-index="1"> </hr>
 					<ul style="text-align:left">
-						<li class="fragment" data-fragment-index="1" style="padding-bottom: 25px;text-align:left"> Synchronous Programming </li>
-						<li class="fragment" data-fragment-index="2" style="padding-bottom: 25px;text-align:left"> Callbacks</li>
-						<li class="fragment" data-fragment-index="3" style="padding-bottom: 25px;text-align:left"> Promises</li>
-						<li class="fragment" data-fragment-index="4" style="padding-bottom: 25px;text-align:left"> Async/Await</li>
-						<li class="fragment" data-fragment-index="4" style="padding-bottom: 25px;text-align:left"> Conclusion</li>
+						<li class="fragment" data-fragment-index="1" style="padding-bottom: 25px;text-align:left">Synchronous Code</li>
+						<li class="fragment" data-fragment-index="2" style="padding-bottom: 25px;text-align:left">Callbacks</li>
+						<li class="fragment" data-fragment-index="3" style="padding-bottom: 25px;text-align:left">Promises</li>
+						<li class="fragment" data-fragment-index="4" style="padding-bottom: 25px;text-align:left">Async/Await</li>
+						<li class="fragment" data-fragment-index="5" style="padding-bottom: 25px;text-align:left">Getting remote data using Fetch</li>
+						<li class="fragment" data-fragment-index="6" style="padding-bottom: 25px;text-align:left">Wrap up</li>
 					</ul>
-
 				</section>
 
-				
-				<section data-markdown>
-					<script type="text/template">
-						<h3 style="text-transform: none">Synchronous Programming</h3>
-						
-						<hr color=#f0047f size="1px"></hr>	
-						<p style="padding-bottom: 25px;text-align:left"> Here is an example:</p>
-						 
-						
-						```
-						console.log('About to define x...')
-						 let x = 5;
+				<section>
+					<h3 style="text-transform: none">Synchronous Code</h3>
+					<hr color=#f0047f size="1px"></hr>	
+					<p class="fragment" data-fragment-index="1" style="padding-bottom: 5px;text-align:left"> Here is an example:</p>
+					<pre><code data-trim data-noescape class="fragment" data-fragment-index="1">
+					console.log('About to define x...')
+						let x = 5;
 
-						console.log('About to define y...')
-						let y = 10;
+					console.log('About to define y...')
+					let y = 10;
 
-						console.log('About to add the variable together...')
+					console.log('About to add the variable together...')
 
-						let sum = x + y 
+					let sum = x + y 
 
-						console.log('The sum is ' + sum); 
-						```
-						<br/>
-						
-						<p style="text-align: left;margin-top: -25px;">The output:</p>
-						<img src="asset/sync1.png"
-     					alt="Output"
-     					style="float: left; margin-left: 50px; margin-top: -10px;" />
-					</script>
+					console.log('The sum is ' + sum); 
+					</code></pre>
+					
+					<p class="fragment" data-fragment-index="2" style="text-align: left;margin-top: 30px; margin-bottom: 30px;">The output:</p>
+					<img class="fragment" data-fragment-index="2" src="asset/sync1.png"
+					alt="Output"
+					style="float: left; margin-left: 50px; margin-top: -10px;" />
+				</script>
 				</section>
 			
 				<section>
-					<section> <h3 style="text-transform: none">Asynchronous Programming</h3>
+					<section id ="asyncCode"> <h3 style="text-transform: none">Asynchronous Code</h3>
 					<hr color=#f0047f size="1px"></hr>
 					<ul style="text-align:left">
-						<li class="fragment" data-fragment-index="1" style="padding-bottom: 25px;text-align:left"> Get around functions blocking functions that prevent any code from being executed while we wait for our original functions to complete</li>
-						<li class="fragment" data-fragment-index="2" style="padding-bottom: 25px;text-align:left"> Callbacks were designed for such purpose. One could pass callbacks to what would otherwise be blocking code in JS.</li>
-						<li class="fragment" data-fragment-index="3" style="padding-bottom: 25px;text-align:left"> This is especially important when one has a long running operations, such as reading a file.</li>
-						<li class="fragment" data-fragment-index="4" style="padding-bottom: 25px;text-align:left"> Async/Await</li>
-						<li class="fragment" data-fragment-index="4" style="padding-bottom: 25px;text-align:left"> Conclusion</li>
+						<li class="fragment" data-fragment-index="1" style="padding-bottom: 25px;text-align:left">Get around blocking functions that prevent other code from being executed. <a href="#/blockingEx">Go to blocking example</a></li>
+						<li class="fragment" data-fragment-index="2" style="padding-bottom: 25px;text-align:left">Callbacks were designed for such purpose. One could pass callbacks to what would otherwise be blocking functions in JS.</li>
+						<li class="fragment" data-fragment-index="3" style="padding-bottom: 25px;text-align:left">This is especially important when one has a long running operations, such as reading a file. <a href="#/callbacks">Go to callback example</a></li>
 					</ul>
+					
 					</section>
-					<section>
+					<section id="blockingEx">
 						<h3 style="text-transform: none">Blocking Functions</h3>
 						<hr color=#f0047f size="1px"> </hr>
-							Vertical Slide 1
+						<p style="padding-bottom:5px;text-align:left"> Here is an example: </p>
+						<pre><code data-trim data-noescape data-line-numbers="0-5">
+							let fs = require('fs'); 
+
+							let fileContents = fs.readFileSync('./hello.txt', 'utf-8');
+							
+							console.log(fileContents);
+						</code></pre>
+						<a href="#/asyncCode">Back to Asynchronous Code</a>
 					</section>
-					<section>
-						<h3 style="text-transform: none">Callbacks</h3>
+					<section id="callbacks"> <h3 style="text-transform: none">Callbacks</h3>
 						<hr color=#f0047f size="1px"> </hr>
 						<p style="padding-bottom:5px;text-align:left"> Here is an example: </p>
-						<pre><code data-trim data-noescape data-line-numbers="7,11">
+						<pre><code data-trim data-noescape data-line-numbers="0-10">
 							let fs = require('fs')
-
 							function printFileContents(error, fileContents){
     							if (error) {
         							console.log('ERROR!');
@@ -102,18 +103,159 @@
         							console.log(fileContents);
     							}
 							}
-
 							fs.readFile('./hello.txt', 'utf-8', printFileContents);
 							console.log('Hello!');
 						</code></pre>
-						<ul style="text-align:left; padding-top:20px; ">
-							<li class="fragment" data-fragment-index="1" style="padding-bottom: 25px;text-align:left"> The above function would read the helo.txt file.</li>
-							<li class="fragment" data-fragment-index="2" style="padding-bottom: 25px;text-align:left"> The code would assign the contents of the file to the variable fileContents.</li>
-							<li class="fragment" data-fragment-index="3" style="padding-bottom: 25px;text-align:left"> The code would then print fileContents.</li>
+						<ul style="text-align:left; padding-top:0px; ">
+							<li class="fragment" data-fragment-index="1" style="padding-bottom: 5px;text-align:left"> The code would read the helo.txt file.</li>
+							<li class="fragment" data-fragment-index="2" style="padding-bottom: 5px;text-align:left"> It would assign file contents to variable fileContents.</li>
+							<li class="fragment" data-fragment-index="3" style="padding-bottom: 5px;text-align:left"> It would then print fileContents.</li>
 						</ul>
 					</section>
-				</section>
+					<section> <h3 style="text-transform: none">Callback Output</h3>
+						<hr color=#f0047f size="1px"> </hr>
+						<ul style="text-align:left; padding-top:20px; ">
+							<li class="fragment" data-fragment-index="1" style="padding-bottom: 5px;text-align:left">Here is the output:</p> 
+							<img src="asset/async1.png"
+     							alt="Output"
+     							style="margin-left: 100px; margin-top: 0px; height: 80px; background: transparent;" />
+							<li class="fragment" data-fragment-index="2" style="padding-bottom: 5px;text-align:left">Output shows earlier code does not block other code to run. <a href="#/callbacks">Check out Callbacks code again</a></li>
+							<li class="fragment" data-fragment-index="3" style="padding-bottom: 5px;text-align:left">Asynchronous code allows other code to run</li>
+							<li class="fragment" data-fragment-index="4" style="padding-bottom: 5px;text-align:left">Although advantageous, this could also lead to problems</li>
+						</ul>
+					</section>
+					<section> <h3 style="text-transform: none">Callback Refactored </h3>
+						<hr color=#f0047f size="1px"> </hr>
+						<pre><code data-trim data-noescape data-line-numbers="0-12">
+							let fs = require('fs')
 
+							fs.readFile('./hello.txt', 'utf-8', 
+								function printFileContents(error, fileContents){
+									if (error) {
+										console.log('ERROR!');
+									} else {
+										console.log(fileContents);
+										console.log('Hello!');
+									}
+								});
+						</code></pre>
+					</section>
+				</section> 
+					
+				<section> 
+					<section><h3 style="text-transform: none">Promises</h3>
+					<hr color=#f0047f size="1px"> </hr>
+					<ul style="text-align:left; padding-top:0px; ">
+						<li class="fragment" data-fragment-index="1" style="padding-bottom: 5px;text-align:left">Provide another way to work with callbacks</li>
+						<li class="fragment" data-fragment-index="2" style="padding-bottom: 5px;text-align:left">Provide better code readibility than using callbacks</li>
+					</ul>
+					<pre><code class="fragment" data-fragment-index="3" data-trim data-noescape data-line-numbers="0-10">
+						let fs = require('fs');
+
+						fs.promises.readFile('./hello.txt', 'utf-8')
+    						.then(function(fileContents) {
+       	 					console.log(fileContents);
+							console.log('Hello!');
+    						})
+    						.catch(function(error){
+        					console.log(error);
+    						});
+					</code></pre>
+					</section>
+					<section id="promisesEx2"><h3 style="text-transform: none">Promises Also Allows Multiple Operations</h3>
+					<hr color=#f0047f size="1px"> </hr>
+					<p style="padding-bottom: 0px;text-align:left"> Here is an example:</p>
+					<pre><code class="fragment" data-fragment-index="1" data-trim data-noescape data-line-numbers="0-14">
+						let fs = require('fs');
+
+						fs.promises.readFile('./hello.txt', 'utf-8')
+							.then(function(fileContents) {
+								console.log('File 1 contents: ' + fileContents);
+								return fs.promises.readFile('./goodbye.txt', 'utf-8')
+							})
+							.then(function(file2Contents) {
+								console.log('File 2 contents: '+ file2Contents);
+							})
+
+							.catch(function(error){
+								console.log(error);
+							});
+					</code></pre>
+					<a class="fragment" data-fragment-index="1" href="#/asyncAwaitEx">Go to Async Await example</a>
+					</section>
+					<section><h3 style="text-transform: none">Output from Multiple Promises</h3>
+					<hr color=#f0047f size="1px"> </hr>
+					<img src="asset/async2.png"
+						alt="Output"
+						style="float: left; margin-left: 50px; margin-top: 25px;" />
+					</section> 
+				</section>
+				
+				<section id="asyncAwaitEx">
+					<h3 style="text-transform: none">Async Await for Even Better Readibility</h3>
+				<hr color=#f0047f size="1px"> </hr>
+				<pre><code data-trim data-noescape data-line-numbers="1-15">
+					let fs = require('fs');
+					async function readFiles() {
+						try {
+							let fileContents = await fs.promises.readFile(
+								'./hello.txt', 'utf-8');
+							console.log('File 1 contents: ' + fileContents);
+							
+							let file2Contents = await fs.promises.readFile(
+								'./goodbye.txt', 'utf-8');
+							console.log('File 2 contents: ' + file2Contents);
+						} catch (error) {
+							console.log(error);
+						}
+					}
+					readFiles();
+				</code></pre>
+				<a href="#/promisesEx2">Go to Promises example</a>
+				</section>
+				
+				<section> 
+					<section><h3 style="text-transform: none">Requesting Remote Data with Fetch, Async Await</h3>
+					<hr color=#f0047f size="1px"> </hr>
+					<ul style="text-align:left; padding-top:0px; ">
+						<li class="fragment" data-fragment-index="1" style="padding-bottom: 5px;text-align:left">Fetch allows developers to make requests and manipulate response</li>
+						<li class="fragment" data-fragment-index="2" style="padding-bottom: 5px;text-align:left">Fetch returns responses as promise</li>
+					</ul>
+					</section>
+					<section> <h3 style="text-transform: none">Fetch Example</h3>
+						<hr color=#f0047f size="1px"> </hr>
+						<pre><code data-trim data-noescape data-line-numbers="0-18">
+							const fetch = require("node-fetch")
+
+							const url = 'https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY';
+							const url2 = 'https://api.nasa.gov/neo/rest/v1/neo/3542519?api_key=DEMO_KEY'
+
+							async function fetchRequest() {
+								let response = await fetch(url);
+								let data = await response.json();
+								console.log("Data from first link")
+								console.log(data);
+
+								let response2 = await fetch(url2);
+								let data2 = await response2.json();
+								console.log("\nData from second link") 
+								console.log(data2);
+							}
+
+							fetchRequest();
+						</code></pre>
+					</section>
+				</section>
+				
+				<section> 
+					<section><h3 style="text-transform: none">Promises, Async Await Wrap Up</h3>
+					<hr color=#f0047f size="1px"> </hr>
+					<ul style="text-align:left; padding-top:0px; ">
+						<li class="fragment" data-fragment-index="1" style="padding-bottom: 20px;text-align:left">Provide powerful tool to handle expensive operations, such as opening and reading a file</li>
+						<li class="fragment" data-fragment-index="2" style="padding-bottom: 20px;text-align:left">Can be used to pull local or remote data</li>
+					</ul>
+					<a  class="fragment" data-fragment-index="2" href="#/landingSlide">Back to the Beginning</a>
+				</section>
 				
 
 			
